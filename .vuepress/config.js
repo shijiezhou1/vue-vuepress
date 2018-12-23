@@ -1,6 +1,8 @@
 module.exports = {
     title: 'Shijie Zhou',
     description: 'Introducing how to setup vuepress project',
+    dest: './docs', // Specify the output directory
+    base: '/vue-vuepress/', // SET BASE FOR THE CORRECT DEPLOY
     themeConfig: {
         nav: [
             { text: 'Home', link: '/home/' },

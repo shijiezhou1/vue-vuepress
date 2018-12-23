@@ -1,4 +1,4 @@
-<h1 ><div align="center"><a href="www.shijiezhou.com" title="React"><img style="float: left" width="240" src="https://www.shijiezhou.com/images/logo%20j.gif" alt="REACT LOGO"/></center></a></div></h1>
+<h1 ><div align="center"><a href="www.shijiezhou.com" title="React"><img width="140" src="https://www.shijiezhou.com/images/logo%20j.gif" alt="REACT LOGO"/></center></a></div></h1>
 
 <p align="center">Portfolio Site</p>
 <div align="center">
@@ -12,7 +12,7 @@
 </div><br />
 
 <div align="center">
-<img width="50%" src="https://github.com/shijiezhou1/Portfolio/blob/master/images/screenshoot.png" />
+<img width="100%" src="https://raw.githubusercontent.com/shijiezhou1/Portfolio/master/images/screenshoot.png" />
 </div>
 
 ```
