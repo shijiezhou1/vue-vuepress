@@ -1,0 +1,24 @@
+{
+  "name": "vuepress",
+  "version": "1.0.0",
+  "description": "vue template",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "keywords": [
+    "vuepress",
+    "vue",
+    "npm"
+  ],
+  "author": "Shijie Zhou",
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^0.5.0"
+  }
+}
