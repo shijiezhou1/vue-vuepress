@@ -3,6 +3,10 @@ module.exports = {
     description: 'Introducing how to setup vuepress project',
     dest: './docs', // Specify the output directory
     base: '/vue-vuepress/', // SET BASE FOR THE CORRECT DEPLOY
+    sitemap: {
+        filename: 'sitemap.txt',
+        domain: 'http://test.com'
+    },
     themeConfig: {
         nav: [
             { text: 'About', link: '/home/' },
@@ -29,7 +33,8 @@ module.exports = {
                 collapsable: true,
                 children: [
                     '/vue/guide',
-                    '/vue/api'
+                    '/vue/api',
+                    '/vue/mongoose',
                 ]
             },
             {
