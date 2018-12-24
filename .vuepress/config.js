@@ -5,7 +5,7 @@ module.exports = {
     base: '/vue-vuepress/', // SET BASE FOR THE CORRECT DEPLOY
     themeConfig: {
         nav: [
-            { text: 'Home', link: '/home/' },
+            { text: 'About', link: '/home/' },
             { text: 'Projects', link: '/index/' },
             { text: 'Portfolio', link: 'https://www.shijiezhou.com' },
         ],
@@ -18,7 +18,14 @@ module.exports = {
                 ]
             },
             {
-                title: 'Vue Guide',
+                title: 'PHP',
+                collapsable: true,
+                children: [
+                    '/php/'
+                ]
+            },
+            {
+                title: 'Vue',
                 collapsable: true,
                 children: [
                     '/vue/guide',
@@ -26,7 +33,7 @@ module.exports = {
                 ]
             },
             {
-                title: 'React Guide',
+                title: 'React',
                 collapsable: true,
                 children: [
                     '/react/guide',
@@ -34,7 +41,7 @@ module.exports = {
                 ]
             },
             {
-                title: 'API Guide',
+                title: 'API',
                 collapsable: true,
                 children: [
                     '/projects/guide',
