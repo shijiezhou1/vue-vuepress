@@ -1,26 +1,41 @@
 <template>
   <div class="mongoose">
     <h1>Basic Mongoose Use</h1>
-    <button v-on:click="connect">{{ buttonMsg }}</button>
+    <button v-on:click="get">{{ buttonMsg }}</button>
+    <p class="text">{{ contents }}</p>
   </div>
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
-  mounted() {
+  async mounted() {
     console.log("mounted");
-    // const mongoose = require('mongoose');
-    // const result = mongoose.connect('mongodb+srv://abc1234:abc1234@cluster0-7lnqj.mongodb.net/test?retryWrites=true', {useNewUrlParser: true});
   },
   data() {
     return {
-      buttonMsg: "Click to generate"
+      buttonMsg: "Click to generate",
+      contents: ''
     };
   },
+  async created(){
+    console.log("created");
+    try {
+      const res = await axios.get('https://vue-two.herokuapp.com/api/posts/');
+      const data = res.data;
+      console.log(res.data);
+      this.contents = data;
+    } catch (error) {
+        
+    }
+  },
   methods: {
-    connect() {},
+    connect() {
+      
+    },
     get() {
-      console.log("okok");
+      this.contents = '';
     }
   }
 };
