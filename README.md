@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: https://www.shijiezhou.com/images/logo%20j.gif
+heroImage: 'img/newlogo.svg'
 heroText: Projects Demonstration
 tagline: ' '
 actionText: Get Started

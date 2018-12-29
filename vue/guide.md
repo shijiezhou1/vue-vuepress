@@ -1,5 +1,6 @@
 ---
 title: General Guide
+lang: en-US
 ---
 
 # General Guide

@@ -8,10 +8,11 @@
 
 <script>
 import axios from 'axios';
-
+   
 export default {
-  async mounted() {
+  mounted() {
     console.log("mounted");
+ 
   },
   data() {
     return {
@@ -21,14 +22,14 @@ export default {
   },
   async created(){
     console.log("created");
-    try {
-      const res = await axios.get('https://vue-two.herokuapp.com/api/posts/');
-      const data = res.data;
-      console.log(res.data);
-      this.contents = data;
-    } catch (error) {
+    // try {
+    //   const res = await axios.get('https://vue-two.herokuapp.com/api/posts/');
+    //   const data = res.data;
+    //   console.log(res.data);
+    //   this.contents = data;
+    // } catch (error) {
         
-    }
+    // }
   },
   methods: {
     connect() {

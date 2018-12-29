@@ -1,8 +1,18 @@
 module.exports = {
     title: 'Shijie Zhou',
     description: 'Introducing how to setup vuepress project',
+    locales: {
+        // The key is the path for the locale to be nested under.
+        // As a special case, the default locale can use '/' as its path.
+        '/zh/': {
+          lang: 'zh-CN',
+          title: 'VuePress',
+          description: 'Vue 驱动的静态网站生成器'
+        }
+    },
     dest: './docs', // Specify the output directory
-    base: '/vue-vuepress/', // SET BASE FOR THE CORRECT DEPLOY
+    base: '/vue-vuepress/', // SET BASE FOR THE CORRECT DEPLOY,
+    plugins: ['@vuepress/medium-zoom'],
     sitemap: {
         filename: 'sitemap.txt',
         domain: 'http://test.com'
@@ -32,7 +42,7 @@ module.exports = {
                 title: 'Vue',
                 collapsable: true,
                 children: [
-                    '/vue/guide',
+                    '/vue/guide.md',
                     '/vue/api',
                     '/vue/mongoose',
                 ]
