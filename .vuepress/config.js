@@ -35,7 +35,7 @@ module.exports = {
                 title: 'PHP',
                 collapsable: true,
                 children: [
-                    '/php/'
+                    '/php/pdo.md'
                 ]
             },
             {
