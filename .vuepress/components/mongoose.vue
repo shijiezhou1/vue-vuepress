@@ -40,14 +40,16 @@ export default {
       this.contents = '';
     },
     postone(){
+      let self = this;
       axios.post('https://vue-two.herokuapp.com/api/posts/', {
         text: this.text,
         createdAt: new Date()
       })
-      .then(function (response) {
-       
-        const res = axios.get('https://vue-two.herokuapp.com/api/posts/');
-        // console.log(res.data);
+      .then((response) => {
+        axios.get('https://vue-two.herokuapp.com/api/posts/')
+        .then((update) => {
+           this.contents = update.data;
+        })
       })
       .catch(function (error) {
         console.log(error);

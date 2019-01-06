@@ -1,15 +1,20 @@
 ---
-title: Guide
+title: AXIOS in Vue
 ---
 
-# API GUIDE
-## The Beginning
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum in sapien sed dictum. Phasellus placerat sem a eros rutrum efficitur. Proin vestibulum quam ut felis maximus lacinia. Vestibulum non cursus massa. Pellentesque quis leo at tellus aliquet porta. Quisque volutpat sollicitudin tincidunt. In gravida ante nisl, at pretium nibh scelerisque eget. Phasellus eleifend pretium imperdiet. Nunc egestas finibus dui a rhoncus. Integer viverra dapibus posuere. Donec ut augue neque. Aliquam sed sem eu lacus posuere semper sit amet quis orci. Suspendisse potenti.
+# AXIOS GUIDE
+## 
+When you use nest axios request, you want may get an error: 
 
-```js
-console.log("wachaaaaa!!!")
-let chuloo = 'awesome'
-let you = 'a little more awesome'
+::: danger
+Uncaught (in promise) TypeError: Cannot set property of undefined with axios
+:::
+
+```
+let self = this; //store this context on a variable
+axios.get('url').then(function(data){    
+    self.jokes = data;
+});
 ```
 
 ## Hidden Leaf API Chakras
