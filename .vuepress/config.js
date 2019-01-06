@@ -5,9 +5,9 @@ module.exports = {
         // The key is the path for the locale to be nested under.
         // As a special case, the default locale can use '/' as its path.
         '/zh/': {
-          lang: 'zh-CN',
-          title: 'VuePress',
-          description: 'Vue 驱动的静态网站生成器'
+            lang: 'zh-CN',
+            title: 'VuePress',
+            description: 'Vue 驱动的静态网站生成器'
         }
     },
     dest: './docs', // Specify the output directory
