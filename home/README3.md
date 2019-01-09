@@ -36,7 +36,7 @@ git push -f https://github.com/shijiezhou1/vue-vuepress master:gh-pages
 ### Setup Express - USING HEROKU
 
 ```
-cd ~
+cd $HOME
 brew install heroku/brew/heroku
 ```
 
