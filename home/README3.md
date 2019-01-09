@@ -30,7 +30,7 @@ git init
 git add .
 git commit -m 'deploy to gh'
 git remote add gh-pages https://github.com/shijiezhou1/vue-vuepress.git
-git push -f gh-pages master || git push -f https://github.com/shijiezhou1/vue-mongo-setup master:gh-pages
+git push -f https://github.com/shijiezhou1/vue-vuepress master:gh-pages
 ```
 
 ### Setup Express - USING HEROKU
