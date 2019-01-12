@@ -1,11 +1,15 @@
 <template>
   <div class="mongoose">
-    <h1>Projects Lists</h1>
+    <transition name="fade">
+      <h1 v-if="ShowTitleAnimation">Projects Lists</h1>
+    </transition>
     <input type="text" placeholder="Create a Post" v-model="text">
     <input type="text" placeholder="Create a Post with Preview" v-model="urlString">
     <button v-on:click="analysisData">CLICK TO POST REQUEST</button>
     <button v-on:click="generatePreview()">SEND URL</button>
-    <div class="post-container">
+    
+    
+    <div class="grid-container">
       <div
         class="post"
         v-for="(post, index) in posts"
@@ -19,10 +23,13 @@
         <a v-bind:href="posts[index].text.url" target="_blank">
           <img v-bind:src="posts[index].text.image">
         </a>
-
-        <h6 class="text">{{ formatDate(post.createdAt) }}</h6>
+        
+           <h6 class="text">{{ formatDate(post.createdAt) }}</h6>
+      
+       
       </div>
     </div>
+   
   </div>
 </template>
 
@@ -33,9 +40,11 @@ export default {
   mounted() {
     console.log("mounted");
     this.getData();
+    this.ShowTitleAnimation = true;
   },
   data() {
     return {
+      ShowTitleAnimation: false,
       text: null,
       posts: null,
       urlString: null
@@ -131,9 +140,11 @@ export default {
   color: white;
 }
 
-.post-container {
+.grid-container {
   border-radius: 25px;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 0px;
 }
 
 .post {
@@ -144,15 +155,23 @@ export default {
   border-radius: 25px;
 }
 @media (min-width: 710px) and (max-width: 900px) {
-  .post-container {
+  .grid-container {
     border-radius: 25px;
     display: block!important;
   }
 }
 @media (min-width: 0px) and (max-width: 414px) {
-  .post-container {
+  .grid-container {
     border-radius: 25px;
     display: block!important;
   }
+}
+
+/*fade animation transition*/
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 3s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
 </style>

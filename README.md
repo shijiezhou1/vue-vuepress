@@ -2,7 +2,7 @@
 home: true
 heroImage: 'img/newlogo.svg'
 heroText: Projects Demonstration
-tagline: ' '
+tagline: ''
 actionText: Get Started
 actionLink: /home/
 features:
