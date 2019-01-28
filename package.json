@@ -7,6 +7,7 @@
     "doc": "docs"
   },
   "scripts": {
+    "start": "vuepress dev",
     "test": "echo \"Error: no test specified\" && exit 1",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
@@ -24,7 +25,6 @@
   },
   "homepage": "https://github.com/shijiezhou1/vue-vuepress",
   "dependencies": {
-    "axios": "^0.18.0",
-    "mongodb": "^3.1.10"
+    "axios": "^0.18.0"
   }
 }

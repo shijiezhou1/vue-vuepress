@@ -3,13 +3,17 @@
     <transition name="fade">
       <h1 v-if="ShowTitleAnimation">Projects Lists</h1>
     </transition>
-    <input type="text" placeholder="Create a Post" v-model="text">
-    <input type="text" placeholder="Create a Post with Preview" v-model="urlString">
-    <button v-on:click="analysisData">CLICK TO POST REQUEST</button>
-    <button v-on:click="generatePreview()">SEND URL</button>
-    
-    
-    <div class="grid-container">
+
+    <hr>
+    <containerarticle></containerarticle>
+    <hr>
+    <!-- <input type="text" placeholder="Create a Post" v-model="text"> -->
+    <!-- <input type="text" placeholder="Create a Post with Preview" v-model="urlString"> -->
+    <!-- <button v-on:click="analysisData">CLICK TO POST REQUEST</button> -->
+    <!-- <button v-on:click="generatePreview()">SEND URL</button> -->
+    <!-- <button class="btn btn-primary" @click="addItem">Add Item</button> -->
+
+    <!-- <div class="grid-container">
       <div
         class="post"
         v-for="(post, index) in posts"
@@ -23,23 +27,17 @@
         <a v-bind:href="posts[index].text.url" target="_blank">
           <img v-bind:src="posts[index].text.image">
         </a>
-        
-           <h6 class="text">{{ formatDate(post.createdAt) }}</h6>
-      
-       
-      </div>
+
+        <h6 class="text">{{ formatDate(post.createdAt) }}</h6>
+      </div> -->
     </div>
-   
   </div>
 </template>
 
 <script>
-import axios from "axios";
-
 export default {
   mounted() {
-    console.log("mounted");
-    this.getData();
+    // this.getData();
     this.ShowTitleAnimation = true;
   },
   data() {
@@ -47,12 +45,20 @@ export default {
       ShowTitleAnimation: false,
       text: null,
       posts: null,
-      urlString: null
+      urlString: null,
+      numbers: [1, 2, 3, 4, 5],
     };
   },
   computed: {},
   created() {},
   methods: {
+    addItem() {
+      const pos = Math.floor(Math.random() * this.numbers.length);
+      this.numbers.splice(pos, 0, this.numbers.length + 1);
+    },
+    removeItem(index) {
+      this.numbers.splice(index, 1);
+    },
     generatePreview() {
       const randomKey = "5c32c72da32d9cefe75fadf1111936278f588ade3617c";
       axios
@@ -136,6 +142,11 @@ export default {
 };
 </script>
 <style scoped>
+.list-group-item {
+  border: 1px solid;
+  margin-bottom: 10px;
+}
+
 .text {
   color: white;
 }
@@ -157,18 +168,19 @@ export default {
 @media (min-width: 710px) and (max-width: 900px) {
   .grid-container {
     border-radius: 25px;
-    display: block!important;
+    display: block !important;
   }
 }
 @media (min-width: 0px) and (max-width: 414px) {
   .grid-container {
     border-radius: 25px;
-    display: block!important;
+    display: block !important;
   }
 }
 
 /*fade animation transition*/
-.fade-enter-active, .fade-leave-active {
+.fade-enter-active,
+.fade-leave-active {
   transition: opacity 3s;
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {

@@ -1,0 +1,72 @@
+[
+    {
+        "_id": "5c32e133035dbf00174d9704",
+        "text": {
+            "title": "The future of the open internet — and our way of life — is in your hands",
+            "description": "There are a lot of scary things happening these days, but here’s what keeps me up late at night. A handful of corporations are turning our…",
+            "image": "https://cdn-images-1.medium.com/max/1200/1*qqUzr_C06yElbc1NfiqBpA.jpeg",
+            "url": "https://medium.freecodecamp.org/inside-the-invisible-war-for-the-open-internet-dd31a29a3f08?gi=d30c09fb20ac"
+        },
+        "createdAt": "2019-01-07T05:18:43.725Z"
+    },
+    {
+        "_id": "5c32e437035dbf00174d9705",
+        "text": {
+            "title": "The Real Cost of Phone Addiction – Great Escape – Medium",
+            "description": "You, like most people, probably use your phone too much. People spend an average of four hours a day staring at their handheld screen, according to the time-tracking app Moment, and that doesn’t…",
+            "image": "https://cdn-images-1.medium.com/max/1200/1*wMjnTSs_-znQ2NRUjysK4w.png",
+            "url": "https://medium.com/s/greatescape/the-real-cost-of-phone-addiction-5a57a9b1be86"
+        },
+        "createdAt": "2019-01-07T05:31:35.729Z"
+    },
+    {
+        "_id": "5c32e758035dbf00174d9706",
+        "text": {
+            "title": "How a Feel-Good AI Story Went Wrong in Flint – The Atlantic – Medium",
+            "description": "A machine-learning model showed promising results, but city officials and their engineering contractor abandoned it",
+            "image": "https://cdn-images-1.medium.com/focal/1200/632/62/60/1*z96xzLpU1CdN22TZ-aGSfQ.jpeg",
+            "url": "https://medium.com/the-atlantic/how-a-feel-good-ai-story-went-wrong-in-flint-96e097378b9b"
+        },
+        "createdAt": "2019-01-07T05:44:56.799Z"
+    },
+    {
+        "_id": "5c32ede8035dbf00174d9708",
+        "text": {
+            "title": "What Are The Best Width Ranges for Media Queries",
+            "description": "Can someone let me know What are the best width ranges for detecting media queries in a responsive design? I would like to cover all Desktop/Laptop monitors( with one orientation) in 4 media queri...",
+            "image": "https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded",
+            "url": "https://stackoverflow.com/questions/13637106/what-are-the-best-width-ranges-for-media-queries"
+        },
+        "createdAt": "2019-01-07T06:12:56.336Z"
+    },
+    {
+        "_id": "5c33f66e035dbf00174d9709",
+        "text": {
+            "title": "VuePress",
+            "description": "Vue-powered Static Site Generator",
+            "image": "http://vuepress.vuejs.org/hero.png",
+            "url": "https://vuepress.vuejs.org/"
+        },
+        "createdAt": "2019-01-08T01:01:34.246Z"
+    },
+    {
+        "_id": "5c36c8db4f0e330017f5534b",
+        "text": {
+            "title": "Progressive Web Apps on iOS are here 🚀 – Maximiliano Firtman – Medium",
+            "description": "With iOS 11.3, Apple has silently added support for the basic set of new technologies behind the idea of “Progressive Web Apps” (PWAs)…",
+            "image": "https://cdn-images-1.medium.com/max/1200/1*cTRvyVCe5TDVcBd7Pcpv8A.png",
+            "url": "https://medium.com/@firt/progressive-web-apps-on-ios-are-here-d00430dee3a7"
+        },
+        "createdAt": "2019-01-10T04:23:55.818Z"
+    },
+    {
+        "_id": "5c472c17af15ae0017e98374",
+        "text": {
+            "title": "Troubleshooting MongoDB 100% CPU load and slow queries",
+            "description": "I guess many of you faced once the following CPU spikes on your MongoDB server:",
+            "image": "https://cdn-images-1.medium.com/max/1200/1*vhoREgVTrR_hy26auLnYKA.png",
+            "url": "https://medium.com/@igorkhomenko/troubleshooting-mongodb-100-cpu-load-and-slow-queries-da622c6e1339"
+        },
+        "createdAt": "2019-01-22T14:43:35.132Z"
+    }
+]
