@@ -24,14 +24,14 @@ export default {
   },
   methods: {
     getCustomerLocalhost() {
-      axios.get(this.expressLocalhost).then(getcustomer => {
-        console.log(getcustomer.data);
+      axios.get(this.expressServer).then(getcustomer => {
+        // console.log(getcustomer.data);
         this.line1 = getcustomer.data;
       });
     },
     getCustomerServer() {
       axios.get(this.expressLocalhost).then(getcustomer => {
-        console.log(getcustomer.data);
+        // console.log(getcustomer.data);
         this.line2 = getcustomer.data;
       });
     }

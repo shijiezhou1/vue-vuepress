@@ -8,9 +8,9 @@
     <containerarticle></containerarticle>
     <hr>
     <!-- <input type="text" placeholder="Create a Post" v-model="text"> -->
-    <!-- <input type="text" placeholder="Create a Post with Preview" v-model="urlString"> -->
+    <input class="urlinput" type="text" placeholder="Create a Post with Preview" v-model="urlString">
+    <button class="urlbutton" v-on:click="generatePreview()">SEND URL</button>
     <!-- <button v-on:click="analysisData">CLICK TO POST REQUEST</button> -->
-    <!-- <button v-on:click="generatePreview()">SEND URL</button> -->
     <!-- <button class="btn btn-primary" @click="addItem">Add Item</button> -->
 
     <!-- <div class="grid-container">
@@ -35,6 +35,8 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   mounted() {
     // this.getData();
@@ -69,13 +71,13 @@ export default {
         .then(resp => {
           console.log(resp.data);
           axios
-            .post("https://vue-two.herokuapp.com/api/posts/", {
+            .post("https://expressone.herokuapp.com/api/post", {
               text: resp.data,
               createdAt: new Date()
             })
             .then(response => {
               axios
-                .get("https://vue-two.herokuapp.com/api/posts/")
+                .get("https://expressone.herokuapp.com/api/post")
                 .then(update => {
                   this.contents = update.data;
                   this.posts = update.data;
@@ -185,5 +187,15 @@ export default {
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
+}
+
+.urlinput{
+  width: 100%;
+  height: 30px;
+}
+
+.urlbutton{
+  width: 100%;
+  height: 30px;
 }
 </style>
