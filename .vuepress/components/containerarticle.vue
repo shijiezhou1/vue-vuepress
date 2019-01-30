@@ -1,6 +1,5 @@
 <template>
   <div class="grid-container">
-    <div>HERE IS ALL THE LIST</div>
     <div class="text">{{line1}}</div>
     <div class="text">{{line2}}</div>
   </div>
@@ -18,8 +17,8 @@ export default {
     return {
       line1: "",
       line2: "",
-      expressServer: "https://expressone.herokuapp.com/customer/all",
-      expressLocalhost: "http://localhost:3000/customer/all"
+      expressServer: "https://expressone.herokuapp.com/api/post",
+      expressLocalhost: "http://localhost:3000/api/post"
     };
   },
   methods: {

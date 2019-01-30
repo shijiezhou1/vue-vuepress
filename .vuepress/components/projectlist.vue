@@ -7,7 +7,7 @@
     <hr>
     <containerarticle></containerarticle>
     <hr>
-    <!-- <input type="text" placeholder="Create a Post" v-model="text"> -->
+
     <input class="urlinput" type="text" placeholder="Create a Post with Preview" v-model="urlString">
     <button class="urlbutton" v-on:click="generatePreview()">SEND URL</button>
     <!-- <button v-on:click="analysisData">CLICK TO POST REQUEST</button> -->
@@ -39,7 +39,6 @@ import axios from "axios";
 
 export default {
   mounted() {
-    // this.getData();
     this.ShowTitleAnimation = true;
   },
   data() {
@@ -63,24 +62,21 @@ export default {
     },
     generatePreview() {
       const randomKey = "5c32c72da32d9cefe75fadf1111936278f588ade3617c";
-      axios
-        .post("https://api.linkpreview.net", {
-          q: this.urlString,
-          key: randomKey
-        })
-        .then(resp => {
+      const keyVal = {q: this.urlString,key: randomKey};
+      axios.post("https://api.linkpreview.net", keyVal).then(resp => {
           console.log(resp.data);
-          axios
-            .post("https://expressone.herokuapp.com/api/post", {
+          // // SAVE
+          const localURL = "http://localhost:3000/api/post";
+          const saveURL = "https://expressone.herokuapp.com/post";
+          axios.post(localURL, {
               text: resp.data,
               createdAt: new Date()
-            })
-            .then(response => {
-              axios
-                .get("https://expressone.herokuapp.com/api/post")
+              })
+              .then(response => {
+              axios.get(localURL)
                 .then(update => {
-                  this.contents = update.data;
-                  this.posts = update.data;
+                  // this.contents = update.data;
+                  // this.posts = update.data;
                 });
             })
             .catch(function(error) {
