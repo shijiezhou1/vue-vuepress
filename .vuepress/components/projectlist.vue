@@ -10,26 +10,7 @@
 
     <input class="urlinput" type="text" placeholder="Create a Post with Preview" v-model="urlString">
     <button class="urlbutton" v-on:click="generatePreview()">SEND URL</button>
-    <!-- <button v-on:click="analysisData">CLICK TO POST REQUEST</button> -->
-    <!-- <button class="btn btn-primary" @click="addItem">Add Item</button> -->
 
-    <!-- <div class="grid-container">
-      <div
-        class="post"
-        v-for="(post, index) in posts"
-        v-bind:item="post"
-        v-bind:index="index"
-        v-bind:key="post._id"
-        v-on:dblclick="deletePost(post._id)"
-      >
-        <h4 class="text">{{posts[index].text.title}}</h4>
-        <h5 class="text">{{posts[index].text.description}}</h5>
-        <a v-bind:href="posts[index].text.url" target="_blank">
-          <img v-bind:src="posts[index].text.image">
-        </a>
-
-        <h6 class="text">{{ formatDate(post.createdAt) }}</h6>
-      </div> -->
     </div>
   </div>
 </template>
@@ -96,27 +77,6 @@ export default {
         console.log(error);
       }
     },
-    formatDate(date) {
-      // ISO => date, time
-      var months = [
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October",
-        "November",
-        "December"
-      ];
-      var d = new Date(date);
-      var namedMonth = months[d.getMonth()];
-      return new Date(date).toLocaleString();
-      // return `${namedMonth} ${d.getDate()}, ${d.getFullYear()} - ${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`;
-    },
     deletePost(idNum) {
       console.log(idNum);
     },
@@ -143,37 +103,6 @@ export default {
 .list-group-item {
   border: 1px solid;
   margin-bottom: 10px;
-}
-
-.text {
-  color: white;
-}
-
-.grid-container {
-  border-radius: 25px;
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-column-gap: 0px;
-}
-
-.post {
-  margin-bottom: 10px;
-  margin-right: 10px;
-  padding: 1px 20px;
-  background-color: black;
-  border-radius: 25px;
-}
-@media (min-width: 710px) and (max-width: 900px) {
-  .grid-container {
-    border-radius: 25px;
-    display: block !important;
-  }
-}
-@media (min-width: 0px) and (max-width: 414px) {
-  .grid-container {
-    border-radius: 25px;
-    display: block !important;
-  }
 }
 
 /*fade animation transition*/
