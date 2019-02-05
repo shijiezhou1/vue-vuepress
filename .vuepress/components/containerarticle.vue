@@ -1,6 +1,5 @@
 <template>
   <div class="grid-container">
-    <!-- <div class="text">{{line1}}</div> -->
     <div class="grid-container">
       <div
         class="post"
@@ -46,7 +45,6 @@ export default {
     // },
     getCustomerLocalhost() {
       axios.get(this.expressLocalhost).then(getcustomer => {
-        // console.log(getcustomer.data);
         this.line1 = getcustomer.data;
       });
     },
