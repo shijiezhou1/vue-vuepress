@@ -9,10 +9,11 @@
         v-bind:key="post._id"
         v-on:dblclick="deletePost(post._id)"
       >
-        <h4 class="text">{{line1[index].text.title}}</h4>
-        <h5 class="text">{{line1[index].text.description}}</h5>
+       
         <a v-bind:href="line1[index].text.url" target="_blank">
-          <img v-bind:src="line1[index].text.image">
+          <h4 class="text">{{line1[index].text.title}}</h4>
+          <h5 class="text">{{line1[index].text.description}}</h5>
+          <img v-bind:src=formatImage(line1[index].text.image)>
         </a>
         <h6 class="text">{{ formatDate(post.createdAt) }}</h6>
       </div>
@@ -37,16 +38,22 @@ export default {
     };
   },
   methods: {
-    // getCustomerServer() {
-    //   axios.get(this.expressServer).then(getcustomer => {
-    //     // console.log(getcustomer.data);
-    //     this.line2 = getcustomer.data;
-    //   });
-    // },
+    getCustomerServer() {
+      axios.get(this.expressServer).then(getcustomer => {
+        // console.log(getcustomer.data);
+        this.line2 = getcustomer.data;
+      });
+    },
     getCustomerLocalhost() {
       axios.get(this.expressLocalhost).then(getcustomer => {
         this.line1 = getcustomer.data;
       });
+    },
+    formatImage(imgUrl){
+      if(imgUrl){
+        return imgUrl;
+      }
+      return "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5YznahbCcaCBgKJ4j6nYvPHTYEt5MX9tAaQlrXnMjPNKtQVS6";
     },
     formatDate(date) {
       // ISO => date, time
@@ -73,6 +80,9 @@ export default {
 </script>
 
 <style>
+a{
+  color: white;
+}
 .grid-container {
   border-radius: 25px;
   display: grid;
