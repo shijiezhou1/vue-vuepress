@@ -1,5 +1,5 @@
----
-home: true
+<!-- ---
+home: false
 heroImage: 'img/newlogo.svg'
 heroText: Projects Demonstration
 tagline: ''
@@ -13,4 +13,5 @@ features:
 - title: Optimization
   details: Step by step to help fix the coding problems and potential issues.
 footer: Copyright © 2018-present Shijie Zhou
----
+--- -->
+### <index></index>

@@ -19,9 +19,9 @@ module.exports = {
     },
     themeConfig: {
         nav: [
-            { text: 'About', link: '/home/' },
+            { text: 'Home', link: '/home/' },
             { text: 'Projects', link: '/index/' },
-            { text: 'Portfolio', link: 'https://www.shijiezhou.com' },
+            { text: 'About', link: 'https://www.shijiezhou.com' },
         ],
         sidebar: [
             {
