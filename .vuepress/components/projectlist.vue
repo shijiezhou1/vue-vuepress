@@ -3,14 +3,11 @@
     <transition name="fade">
       <h1 v-if="ShowTitleAnimation">Projects Lists</h1>
     </transition>
-
     <hr>
     <containerarticle></containerarticle>
     <hr>
-
     <contentbutton></contentbutton>
-
-    </div>
+  </div>
   </div>
 </template>
 
@@ -30,7 +27,7 @@ export default {
     };
   },
   computed: {},
-  created() {},
+  created() { },
   methods: {
     addItem() {
       const pos = Math.floor(Math.random() * this.numbers.length);
@@ -39,7 +36,7 @@ export default {
     removeItem(index) {
       this.numbers.splice(index, 1);
     },
-  
+
     async getData() {
       console.log("created always run first");
       try {
@@ -67,7 +64,7 @@ export default {
             this.posts = update.data;
           });
         })
-        .catch(function(error) {
+        .catch(function (error) {
           console.log(error);
         });
     }
@@ -88,6 +85,4 @@ export default {
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
 }
-
-
 </style>

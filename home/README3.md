@@ -33,6 +33,8 @@ git remote add gh-pages https://github.com/shijiezhou1/vue-vuepress.git
 git push -f https://github.com/shijiezhou1/vue-vuepress master:gh-pages
 ```
 
+## API for this vuepress
+
 ### Setup Express - USING HEROKU
 
 ```
