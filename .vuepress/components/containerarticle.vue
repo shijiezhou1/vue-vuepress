@@ -26,8 +26,8 @@ import axios from "axios";
 
 export default {
   mounted() {
-    // this.getCustomerServer();
-    this.getCustomerLocalhost();
+    this.getCustomerServer();
+    // this.getCustomerLocalhost();
   },
   data() {
     return {
@@ -41,7 +41,7 @@ export default {
     getCustomerServer() {
       axios.get(this.expressServer).then(getcustomer => {
         // console.log(getcustomer.data);
-        this.line2 = getcustomer.data;
+        this.line1 = getcustomer.data;
       });
     },
     getCustomerLocalhost() {

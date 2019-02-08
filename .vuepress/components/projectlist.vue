@@ -6,7 +6,7 @@
     <hr>
     <containerarticle></containerarticle>
     <hr>
-    <contentbutton></contentbutton>
+    <!-- <contentbutton></contentbutton> -->
   </div>
   </div>
 </template>
