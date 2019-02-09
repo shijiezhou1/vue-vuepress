@@ -18,6 +18,7 @@ module.exports = {
     domain: 'http://test.com'
   },
   themeConfig: {
+    lastUpdated: 'Last Updated', // string | boolean
     nav: [
       { text: 'Home', link: '/home/', open: false },
       { text: 'Projects', link: '/index/' },
@@ -48,6 +49,11 @@ module.exports = {
         title: 'API',
         collapsable: true,
         children: ['/projects/guide', '/projects/api']
+      },
+      {
+        title: 'MONGO',
+        collapsable: true,
+        children: ['/mongo/']
       }
     ]
   }
