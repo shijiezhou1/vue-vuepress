@@ -15,4 +15,6 @@ features:
 footer: Copyright © 2018-present Shijie Zhou
 --- -->
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/shijiezhou1/vue-vuepress.svg)](https://greenkeeper.io/)
+
 <index></index>
