@@ -1,12 +1,13 @@
 <template>
-    <h1>Content Matter</h1>
+  <div>
+    LATEST
+    <hr>
+    <signatureheader></signatureheader>
+  </div>
 </template>
 
 <script>
 export default {
-    
+
 }
 </script>
-
-<style scoped>
-</style>
