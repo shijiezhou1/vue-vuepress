@@ -1,27 +1,30 @@
 <template>
-  <div>
+  <div class="signatureheaderStyle">
     <img
       class="selflogo"
       src="../public/img/newlogo.svg"
       alt=""
     >
-    <div class="content">okok</div>
-     <b-alert variant="success" show>Success Alert</b-alert>
-
+    <div class="signatureText">Jay</div>
   </div>
 </template>
 
 <script>
-import BootstrapVue from 'bootstrap-vue';
-
 export default {
 
 }
 </script>
 
 <style scoped>
+.signatureheaderStyle{
+  display:flex;
+}
+.signatureText{
+  margin: 10px 0;
+  font-size: 12px;
+}
 .selflogo {
-  width: 20%;
-  height: 20%;
+  width: 100px;
+  height: 100px;
 }
 </style>
