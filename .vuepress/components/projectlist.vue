@@ -3,7 +3,6 @@
     <transition name="fade">
       <h1 v-if="ShowTitleAnimation">Projects Lists</h1>
     </transition>
-    <hr>
     <containerarticle></containerarticle>
     <hr>
     <contentbutton></contentbutton>

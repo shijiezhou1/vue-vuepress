@@ -1,12 +1,12 @@
 <template>
-  <div class="signatureheaderStyle">
+  <!-- <div class="signatureheaderStyle">
     <img
       class="selflogo"
       src="../public/img/newlogo.svg"
       alt=""
     >
     <div class="signatureText">Jay</div>
-  </div>
+  </div> -->
 </template>
 
 <script>
