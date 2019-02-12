@@ -30,13 +30,13 @@ export default {
         console.log(resp.data);
         // // SAVE
         const localURL = "http://localhost:3000/api/post";
-        const saveURL = "https://expressone.herokuapp.com/post";
-        axios.post(localURL, {
+        const saveURL = "https://expressone.herokuapp.com/api/post";
+        axios.post(saveURL, {
           text: resp.data,
           createdAt: new Date()
         })
           .then(response => {
-            axios.get(localURL)
+            axios.get(saveURL)
               .then(update => {
                 console.log(update);
               });
