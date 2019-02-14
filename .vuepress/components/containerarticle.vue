@@ -96,6 +96,8 @@ a{
   background-color: black;
   border-radius: 25px;
   color: white;
+  max-width: 280px;
+  min-width: 210px;
 }
 @media (min-width: 710px) and (max-width: 900px) {
   .grid-container {
