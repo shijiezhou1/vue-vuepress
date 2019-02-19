@@ -23,6 +23,7 @@
 
 <script>
 import axios from "axios";
+import database from '../database';
 
 export default {
   mounted() {
@@ -33,19 +34,16 @@ export default {
     return {
       line1: "",
       line2: "",
-      expressLocalhost: "http://localhost:3000/api/post",
-      expressServer: "https://expressone.herokuapp.com/api/post"
     };
   },
   methods: {
     getCustomerServer() {
-      axios.get(this.expressServer).then(getcustomer => {
-        // console.log(getcustomer.data);
+      axios.get(database.mongodb.url).then(getcustomer => {
         this.line1 = getcustomer.data;
       });
     },
     getCustomerLocalhost() {
-      axios.get(this.expressLocalhost).then(getcustomer => {
+      axios.get(database.localhostdatabase.url).then(getcustomer => {
         this.line1 = getcustomer.data;
       });
     },

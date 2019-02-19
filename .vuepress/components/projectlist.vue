@@ -35,47 +35,13 @@ export default {
     removeItem(index) {
       this.numbers.splice(index, 1);
     },
-
-    async getData() {
-      console.log("created always run first");
-      try {
-        const res = await axios.get("https://vue-two.herokuapp.com/api/posts/");
-        const data = res.data;
-        this.contents = data; //PRINT JSON
-        this.posts = data;
-        console.log(res.data);
-      } catch (error) {
-        console.log(error);
-      }
-    },
     deletePost(idNum) {
       console.log(idNum);
-    },
-    analysisData() {
-      axios
-        .post("https://vue-two.herokuapp.com/api/posts/", {
-          text: this.text,
-          createdAt: new Date()
-        })
-        .then(response => {
-          axios.get("https://vue-two.herokuapp.com/api/posts/").then(update => {
-            this.contents = update.data;
-            this.posts = update.data;
-          });
-        })
-        .catch(function (error) {
-          console.log(error);
-        });
     }
   }
 };
 </script>
 <style scoped>
-.list-group-item {
-  border: 1px solid;
-  margin-bottom: 10px;
-}
-
 /*fade animation transition*/
 .fade-enter-active,
 .fade-leave-active {

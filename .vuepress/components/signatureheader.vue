@@ -1,12 +1,12 @@
 <template>
-  <!-- <div class="signatureheaderStyle">
+  <div class="signatureheaderStyle">
     <img
       class="selflogo"
       src="../public/img/newlogo.svg"
       alt=""
     >
-    <div class="signatureText">Jay</div>
-  </div> -->
+    <div class="signatureText">Jay Zhou - Passion in freelance, web developer and processing </div>
+  </div>
 </template>
 
 <script>
@@ -20,8 +20,8 @@ export default {
   display:flex;
 }
 .signatureText{
-  margin: 10px 0;
-  font-size: 12px;
+  margin: 10px 10px;
+  font-size: 20px;
 }
 .selflogo {
   width: 100px;
