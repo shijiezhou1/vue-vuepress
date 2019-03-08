@@ -43,7 +43,7 @@ export default {
       //     sessionStorage.setItem("myfucktoken-session", response.data.access_token);
       //     console.log(response.data.access_token);
       //   });
-    }
+    // }
   }
 }
 </script>
