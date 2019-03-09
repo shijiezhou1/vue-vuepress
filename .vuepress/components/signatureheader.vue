@@ -20,30 +20,6 @@ export default {
     };
   },
   methods: {
-    // authit() {
-      // var client_id = '12345';
-      // var client_secret = 'secret';
-      // var data = {
-      //   "username": "root",
-      //   "password": "r",
-      //   "grant_type": "password"      }
-
-      // axios({
-      //   method: 'POST',
-      //   url: 'http://localhost:3000/token',
-      //   data: data,
-      //   dataType: 'json',
-      //   contentType: 'application/json;charset=utf-8',
-      //   headers: {
-      //     Authorization: "Bearer " + btoa(client_id + ":" + client_secret)
-      //   },
-      // })
-      //   .then(function (response) {
-      //     window.localStorage.setItem('myfucktoken', response.data.access_token);
-      //     sessionStorage.setItem("myfucktoken-session", response.data.access_token);
-      //     console.log(response.data.access_token);
-      //   });
-    // }
   }
 }
 </script>
