@@ -1,6 +1,6 @@
 module.exports = {
     mongodb:{
-        url: 'http://167.99.13.133:3000/post',
+        url: 'https://shijiezhou.herokuapp.com/post',
     },
     localhostdatabase: {
         url: 'http://localhost:3000/api/post'
