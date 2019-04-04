@@ -36,5 +36,8 @@ jobs:
           name: Find docs directory
           command: cd docs && git init && git add . && git commit -m 'deploy to gh' && git remote add gh-pages https://github.com/shijiezhou1/vue-vuepress.git
       - run:
+          name: Check directory
+          command: cd docs
+      - run:
           name: Run deploy scripts
           command: npm run docs:deploy
