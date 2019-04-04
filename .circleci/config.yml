@@ -53,7 +53,5 @@ jobs:
           name: Git Steps
           command: git push -f https://github.com/shijiezhou1/vue-vuepress master:gh-pages
       - run:
-          name: Git Steps
-      - run:
           name: Run deploy scripts
           command: npm run docs:deploy
