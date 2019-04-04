@@ -37,7 +37,7 @@ jobs:
           command: git init docs/
       - run: 
           name: Add remove
-          command: git remote add gh-pages https://github.com/shijiezhou1/vue-vuepress.git && git add . docs/ && git commit -m 'deploy to gh' dosc/
+          command: git remote add gh-pages https://github.com/shijiezhou1/vue-vuepress.git && git add . docs && git commit -m 'deploy to gh' dosc
       - run:
           name: Run deploy scripts
           command: npm run docs:deploy
