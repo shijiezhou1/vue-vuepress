@@ -38,16 +38,22 @@ jobs:
       - run:
           command: git init
       - run:
+          name: Git Steps
           command: git remote add gh-pages https://github.com/shijiezhou1/vue-vuepress.git
       - run:
+          name: Git Steps
           command: git add .
       - run:
+          name: Git Steps
           command: git commit -m 'deploy to gh'
       - run:
+          name: Git Steps
           command: git status
       - run:
+          name: Git Steps
           command: git push -f https://github.com/shijiezhou1/vue-vuepress master:gh-pages
       - run:
+          name: Git Steps
       - run:
           name: Run deploy scripts
           command: npm run docs:deploy
