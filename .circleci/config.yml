@@ -5,7 +5,7 @@ jobs:
       - image: circleci/node:latest
     filters:
       branches:
-        only: gh-pages
+        only: master
     steps:
       - add_ssh_keys:
           fingerprints:
