@@ -8,6 +8,7 @@
   },
   "scripts": {
     "start": "vuepress dev",
+    "br": "vuepress build && git init docs && git add docs/* && git commit -m 'deploy docs' docs && git push -f https://github.com/shijiezhou1/vue-vuepress master:gh-pages",
     "docs:build": "vuepress build",
     "docs:deploy": "git push -f https://github.com/shijiezhou1/vue-vuepress master:gh-pages"
   },
