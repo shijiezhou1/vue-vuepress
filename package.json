@@ -9,7 +9,6 @@
   "scripts": {
     "start": "vuepress dev",
     "docs:build": "vuepress build",
-    "docs:gh_path": "cd docs && git init && git add . && git commit -m 'deploy to gh' && git remote add gh-pages https://github.com/shijiezhou1/vue-vuepress.git",
     "docs:deploy": "git push -f https://github.com/shijiezhou1/vue-vuepress master:gh-pages"
   },
   "keywords": [

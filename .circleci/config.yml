@@ -33,11 +33,11 @@ jobs:
           name: Github build site
           command: npm run docs:build
       - run:
-          name: Find docs directory
-          command: cd docs && git init && git add . && git commit -m 'deploy to gh' && git remote add gh-pages https://github.com/shijiezhou1/vue-vuepress.git
-      - run:
           name: Check directory
           command: cd docs
+      - run:
+          name: Find docs directory
+          command: git init && git remote add gh-pages https://github.com/shijiezhou1/vue-vuepress.git && git add . && git commit -m 'deploy to gh'
       - run:
           name: Run deploy scripts
           command: npm run docs:deploy
