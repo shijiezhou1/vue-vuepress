@@ -2,21 +2,17 @@
 
 const ParserHelpers = require('webpack/lib/ParserHelpers');
 const stringify = require('json-stringify-safe');
+const strip = require('strip-ansi');
 const uuid = require('uuid/v4');
 const webpack = require('webpack');
-
 
 function addEntry(entry, compilerName) {
   const clientEntry = [`webpack-hot-client/client?${compilerName || uuid()}`];
   let newEntry = {};
 
   if (!Array.isArray(entry) && typeof entry === 'object') {
-    for (const key of Object.keys(entry)) {
-      const value = entry[key];
-      if (Array.isArray(value)) {
-        newEntry[key] = clientEntry.concat(value);
-      }
-    }
+    const [first] = Object.keys(entry);
+    newEntry[first] = clientEntry.concat(entry[first]);
   } else {
     newEntry = clientEntry.concat(entry);
   }
@@ -114,13 +110,16 @@ module.exports = {
     return stringify({ type, data });
   },
 
-  sendStats(broadcast, stats) {
+  sendData(broadcast, stats, options) {
     const send = (type, data) => {
       broadcast(module.exports.payload(type, data));
     };
 
     if (stats.errors && stats.errors.length > 0) {
-      send('errors', stats.errors);
+      if (options.send.errors) {
+        const errors = [].concat(stats.errors).map(error => strip(error));
+        send('errors', { errors });
+      }
       return;
     }
 
@@ -130,10 +129,14 @@ module.exports = {
       return;
     }
 
-    send('hash', stats.hash);
+    const { hash, warnings } = stats;
 
-    if (stats.warnings.length > 0) {
-      send('warnings', stats.warnings);
+    send('hash', { hash });
+
+    if (warnings.length > 0) {
+      if (options.send.warnings) {
+        send('warnings', { warnings });
+      }
     } else {
       send('ok');
     }

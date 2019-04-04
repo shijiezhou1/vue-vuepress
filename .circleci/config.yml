@@ -24,14 +24,17 @@ jobs:
             - node_modules
           key: dependencies-
       - run:
-          name: Github build site
-          command: npm run docs:build 
-      - run:
           name: Tell email
           command: git config --global user.email "cs5129606@gmail.com"
       - run:
           name: Tell name
           command: git config --global user.name "shijiezhou1"
+      - run:
+          name: Github build site
+          command: npm run docs:build
+      - run:
+          name: Find docs directory
+          command: cd docs && git init && git add . && git commit -m 'deploy to gh' && git remote add gh-pages https://github.com/shijiezhou1/vue-vuepress.git
       - run:
           name: Run deploy scripts
           command: npm run docs:deploy
