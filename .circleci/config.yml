@@ -9,13 +9,13 @@ jobs:
     steps:
       - add_ssh_keys:
           fingerprints:
-            - "a3:cb:b4:86:36:f6:d7:6d:90:14:c2:d1:a3:3c:b7:75"
+            - 'a3:cb:b4:86:36:f6:d7:6d:90:14:c2:d1:a3:3c:b7:75'
       - checkout
       - restore_cache:
           keys:
-          - dependencies-
-          # fallback to using the latest cache if no exact match is found
-          - dependencies-
+            - dependencies-
+            # fallback to using the latest cache if no exact match is found
+            - dependencies-
       - run:
           name: Install
           command: npm install
@@ -35,9 +35,9 @@ jobs:
       - run:
           name: Init docs directory
           command: git init docs/
-      - run: 
+      - run:
           name: Add remove
-          command: git remote add gh-pages https://github.com/shijiezhou1/vue-vuepress.git && git add . docs && git commit -m 'deploy to gh' dosc
+          command: git remote add gh-pages https://github.com/shijiezhou1/vue-vuepress.git && git add . docs/ && git commit -m 'deploy to gh' docs/
       - run:
           name: Run deploy scripts
           command: npm run docs:deploy
