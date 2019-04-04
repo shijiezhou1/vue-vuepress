@@ -1,0 +1,57 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:latest
+    filters:
+      branches:
+        only: master
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - 'a3:cb:b4:86:36:f6:d7:6d:90:14:c2:d1:a3:3c:b7:75'
+      - checkout
+      - restore_cache:
+          keys:
+            - dependencies-
+            # fallback to using the latest cache if no exact match is found
+            - dependencies-
+      - run:
+          name: Install
+          command: npm install
+      - save_cache:
+          paths:
+            - node_modules
+          key: dependencies-
+      - run:
+          name: Tell email
+          command: git config --global user.email "cs5129606@gmail.com"
+      - run:
+          name: Tell name
+          command: git config --global user.name "shijiezhou1"
+      - run:
+          name: Github build site
+          command: npm run docs:build
+      - run:
+          name: Init docs directory
+          command: cd docs/
+      - run:
+          command: git init
+      - run:
+          name: Git Steps
+          command: git remote add gh-pages https://github.com/shijiezhou1/vue-vuepress.git
+      - run:
+          name: Git Steps
+          command: git add .
+      - run:
+          name: Git Steps
+          command: git commit -m 'deploy to gh'
+      - run:
+          name: Git Steps
+          command: git status
+      - run:
+          name: Git Steps
+          command: git push -f https://github.com/shijiezhou1/vue-vuepress master:gh-pages
+      - run:
+          name: Run deploy scripts
+          command: npm run docs:deploy
