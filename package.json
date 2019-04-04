@@ -1,5 +1,5 @@
 {
-  "name": "vuepress",
+  "name": "vue-vuepress",
   "version": "1.0.0",
   "description": "vue vuepress site",
   "main": "index.js",
@@ -18,10 +18,11 @@
   ],
   "author": "Shijie Zhou",
   "license": "MIT",
-  "devDependencies": {},
+  "devDependencies": {
+    "vuepress": "^0.14.8"
+  },
   "homepage": "https://github.com/shijiezhou1/vue-vuepress",
   "dependencies": {
-    "vuepress": "0.14.8",
     "axios": "^0.18.0"
   }
 }
