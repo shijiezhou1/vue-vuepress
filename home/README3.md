@@ -49,7 +49,7 @@ heroku login
 heroku create
 ```
 
-### Git Push
+### Git Push to Heroku
 
 ```
 git init
