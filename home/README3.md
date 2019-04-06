@@ -55,7 +55,7 @@ heroku create
 git init
 git add .
 git commit -am "make it better"
-heroku git:remote -a vue-one
+heroku git:remote -a XXXXX
 git status
 git push heroku master
 
