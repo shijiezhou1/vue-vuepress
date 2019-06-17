@@ -6,7 +6,6 @@
       alt=""
     >
     <div class="signatureText">Jay Zhou - Passion in freelance, web developer and processing </div>
-    <!-- <div class="awesome" style="background-color: green;" @click="authit()">button signup</div> -->
   </div>
 </template>
 

@@ -31,12 +31,13 @@ export default {
         // // SAVE
         const localURL = "http://localhost:3000/api/post";
         const saveURL = "https://expressone.herokuapp.com/api/post";
-        axios.post(saveURL, {
+        const optApiUrl = "https://shijiezhou.herokuapp.com/post"
+        axios.post(optApiUrl, {
           text: resp.data,
           createdAt: new Date()
         })
           .then(response => {
-            axios.get(saveURL)
+            axios.get(optApiUrl)
               .then(update => {
                 console.log(update);
               });
