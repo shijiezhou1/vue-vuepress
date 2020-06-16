@@ -20,7 +20,7 @@
   "author": "Shijie Zhou",
   "license": "MIT",
   "devDependencies": {
-    "vuepress": "^1.4.0"
+    "vuepress": "^1.5.2"
   },
   "homepage": "https://github.com/shijiezhou1/vue-vuepress",
   "dependencies": {
